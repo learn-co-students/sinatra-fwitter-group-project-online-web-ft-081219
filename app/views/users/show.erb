@@ -1,0 +1,7 @@
+<h1>tweets by <%= @user.name %></h1>
+
+<ul>
+<% @user.tweets.each do |t| %>
+    <li><%= t.content %></li>
+<% end %>
+</ul>
