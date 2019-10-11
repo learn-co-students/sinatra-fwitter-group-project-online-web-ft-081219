@@ -1,0 +1,16 @@
+
+
+  <form action="/tweets/<%=@tweet.id%>" method="post">
+   <input type = "hidden" value = "patch" name="_method" id= "hidden">
+    Content:
+    <input type="text" id ="content" name="content" value="<%= @tweet.content %>"><br>
+
+    Edit Your Tweet:
+
+    <button type="submit" id="submit">Edit Your Tweet</button>
+
+  
+
+  </form>
+
+ 
