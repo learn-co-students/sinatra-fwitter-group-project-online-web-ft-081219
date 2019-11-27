@@ -1,0 +1,14 @@
+<h1>Tweets Home Index</h1>
+
+
+<% @tweets.each do |t|%>
+  <li><a href="tweets/<%=t.id%>"><%=t.content%></a></li>
+<% end%> 
+
+<br>
+<a href="/tweets/new">Create new Tweet</a>
+<br>
+<a href="/logout">Log out</a>
+<br>
+<a href="/users/<%=current_user.slug%>"> My tweets </a>
+<br>

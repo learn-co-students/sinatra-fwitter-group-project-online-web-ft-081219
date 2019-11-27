@@ -1,0 +1,22 @@
+
+<%# if logged_in? %>
+
+  <h1> tweeting! </h1>
+
+  <form action="/tweets/<%=@tweet.id%>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <br>
+    <label> Edit this Tweet:</label>
+    <br>
+    <textarea rows="4" cols="50" name="content" size="140"><%=@tweet.content%></textarea> 
+    <br>
+    <input type="submit" name="submit" value="Edit Tweet" id="Edit Tweet">
+    
+  </form>
+  <form action="/tweets/<%=@tweet.id%>/delete" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete" name="Delete Tweet">
+  </form>
+<%# else %>
+      <h1> You Must Be Logged in to Edit Tweets </h1>
+<%# end %>
